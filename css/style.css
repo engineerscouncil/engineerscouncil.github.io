@@ -21,6 +21,10 @@
    PAGE HEADER
 ========================================= */
 
+html.loading body {
+    visibility: hidden;
+}
+
 .page-header {
     background: var(--wolfpack-red);
     color: #ffffff;

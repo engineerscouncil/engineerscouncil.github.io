@@ -153,12 +153,20 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
 
     fetch("header.html")
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to load header");
+            }
+
+            return response.text();
+        })
         .then(data => {
             document.getElementById("header").innerHTML = data;
+            document.documentElement.classList.remove("loading");
         })
         .catch(error => {
-            console.error("Error loading header:", error);
+            console.error("Header failed to load:", error);
+            document.documentElement.classList.remove("loading");
         });
 
 });
