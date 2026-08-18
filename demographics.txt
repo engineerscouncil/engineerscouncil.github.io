@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Demographics | NC State Engineers' Council</title>
+
+    <style>
+        /* =========================================
+           DEMOGRAPHICS PAGE
+        ========================================= */
+
+        :root {
+            --wolfpack-red: #cc0000;
+            --reynolds-red: #990000;
+
+            --black: #111111;
+            --dark-gray: #333333;
+            --gray: #666666;
+            --light-gray: #f2f2f2;
+            --border: #dddddd;
+
+            --white: #ffffff;
+
+            --max-width: 1200px;
+        }
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark-gray);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        .container {
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .new-new-page-header {
+            background: #ffffff;
+            color: var(--black);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .new-new-page-header .container {
+            padding: 55px 20px 50px;
+            text-align: center;
+        }
+
+        .new-new-page-header .eyebrow {
+            margin: 0 0 8px;
+
+            color: var(--wolfpack-red);
+
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .new-new-page-header h1 {
+            margin: 0;
+
+            color: var(--black);
+
+            font-size: clamp(40px, 5vw, 56px);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           DEMOGRAPHICS
+        ========================================= */
+
+        .demographics-section {
+            padding: 75px 0 90px;
+            background: var(--light-gray);
+        }
+
+        .section-heading {
+            margin-bottom: 30px;
+        }
+
+        .section-heading .eyebrow {
+            margin: 0 0 7px;
+            color: var(--wolfpack-red);
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: var(--black);
+            font-size: 36px;
+            line-height: 1.2;
+        }
+
+        .demographics-content {
+            max-width: 900px;
+        }
+
+        .demographics-content p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .container {
+                width: min(100% - 30px, 1200px);
+            }
+
+            .new-new-page-header .container {
+                padding: 45px 15px 50px;
+            }
+
+            .new-new-page-header h1 {
+                font-size: 42px;
+            }
+
+            .demographics-section {
+                padding: 55px 0 65px;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .new-new-page-header h1 {
+                font-size: 36px;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         PAGE HEADER
+    ========================================= -->
+
+    <section class="new-new-page-header">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                NC State University · College of Engineering
+            </p>
+
+            <h1>
+                Demographics
+            </h1>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         DEMOGRAPHICS CONTENT
+    ========================================= -->
+
+    <section class="demographics-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    Demographics
+                </p>
+
+                <h2>
+                    TBD
+                </h2>
+
+            </div>
+
+            <div class="demographics-content">
+
+                <p>
+                    TBD
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

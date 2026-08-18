@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Affiliations | Engineers' Council</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        /* =========================================
+           AFFILIATIONS PAGE
+        ========================================= */
+
+        .affiliations-page {
+            padding: 60px 0 80px;
+            background: #ffffff;
+        }
+
+        .affiliations-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .affiliations-intro h1 {
+            margin: 0 0 15px;
+            color: var(--black);
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .affiliations-intro p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+/* =========================================
+   NEW-NEW PAGE HEADER
+========================================= */
+
+.new-new-page-header {
+    background: #ffffff;
+    color: var(--black);
+    border-bottom: 1px solid var(--border);
+}
+
+.new-new-page-header .container {
+    padding: 55px 20px 50px;
+    text-align: center;
+}
+
+.new-new-page-header .eyebrow {
+    margin: 0 0 8px;
+
+    color: var(--wolfpack-red);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.new-new-page-header h1 {
+    margin: 0;
+
+    color: var(--black);
+
+    font-size: clamp(40px, 5vw, 56px);
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+
+        /* =========================================
+           CATEGORY
+        ========================================= */
+
+        .affiliation-section {
+            margin-bottom: 55px;
+        }
+
+        .affiliation-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .affiliation-section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 25px;
+            padding: 18px 22px;
+
+            background: var(--wolfpack-red);
+            color: #ffffff;
+        }
+
+        .affiliation-section-header i {
+            width: 42px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .affiliation-section-header h2 {
+            margin: 0;
+
+            color: #ffffff;
+            font-size: 25px;
+            line-height: 1.25;
+        }
+
+
+        /* =========================================
+           ORGANIZATION GRID
+        ========================================= */
+
+        .affiliation-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* =========================================
+           ORGANIZATION CARD
+        ========================================= */
+
+        .affiliation-card {
+            display: flex;
+            align-items: center;
+
+            gap: 17px;
+
+            min-height: 95px;
+
+            padding: 20px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+            border-left: 4px solid transparent;
+
+            color: inherit;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .affiliation-card:hover {
+            transform: translateY(-3px);
+
+            border-left-color: var(--wolfpack-red);
+
+            box-shadow:
+                0 8px 22px rgba(0, 0, 0, 0.09);
+        }
+
+
+        /* =========================================
+           CARD ICON
+        ========================================= */
+
+        .affiliation-icon {
+            width: 48px;
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--light-gray);
+
+            color: var(--wolfpack-red);
+
+            font-size: 20px;
+        }
+
+        .affiliation-card:hover .affiliation-icon {
+            background: var(--wolfpack-red);
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           CARD TEXT
+        ========================================= */
+
+        .affiliation-card h3 {
+            margin: 0;
+
+            color: var(--black);
+
+            font-size: 16px;
+            line-height: 1.35;
+
+            font-weight: 700;
+        }
+
+        .affiliation-card .visit-link {
+            display: block;
+
+            margin-top: 5px;
+
+            color: var(--gray);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .affiliation-card:hover h3 {
+            color: var(--wolfpack-red);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .affiliation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .affiliations-page {
+                padding: 45px 0 60px;
+            }
+
+            .affiliations-intro h1 {
+                font-size: 34px;
+            }
+
+            .affiliations-intro p {
+                font-size: 16px;
+            }
+
+            .affiliation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .affiliation-section-header {
+                padding: 16px 18px;
+            }
+
+            .affiliation-section-header h2 {
+                font-size: 21px;
+            }
+
+            .affiliation-card {
+                min-height: 85px;
+                padding: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div id="header"></div>
+
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <section class="new-new-page-header">
+
+        <div class="container">
+
+            <p class="eyebrow">
+                NC State University · College of Engineering
+            </p>
+
+            <h1>
+                Affiliations
+            </h1>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         AFFILIATIONS
+    ========================== -->
+
+    <main>
+
+        <section class="affiliations-page">
+
+                <div class="container">
+
+
+                    <!-- INTRO -->
+
+                    <div class="affiliations-intro">
+
+                        <h1>
+                            Engineering Organizations
+                        </h1>
+
+                        <p>
+                            The Engineers' Council works with organizations
+                            across the NC State College of Engineering,
+                            representing a diverse range of academic,
+                            professional, service, identity, and honor
+                            organizations.
+                        </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     APPLIED EXPERIENCES
+                ================================== -->
+
+                <section class="affiliation-section">
+
+                    <div class="affiliation-section-header">
+
+                        <i class="fa-solid fa-gears"></i>
+
+                        <h2>
+                            Applied Experiences
+                        </h2>
+
+                    </div>
+
+
+                    <div class="affiliation-grid">
+
+
+                        <a
+                            href="https://aerialroboticsclub.com/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-helicopter"></i>
+                            </div>
+
+                            <div>
+                                <h3>Aerial Robotics</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.aquapackrobotics.org/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+
+                            <div>
+                                <h3>AquaPack Robotics</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://getinvolved.ncsu.edu/organization/eml"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <div>
+                                <h3>Embedded Machine Learning</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://firstalumniatncstate.org/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+
+                            <div>
+                                <h3>FIRST Alumni Association</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="http://www.ncsurocketry.org/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+
+                            <div>
+                                <h3>High-Powered Rocketry</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="http://liquidrocketry.com/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+
+                            <div>
+                                <h3>Liquid Rocketry Lab</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://getinvolved.ncsu.edu/organization/packbionics"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-hand"></i>
+                            </div>
+
+                            <div>
+                                <h3>Pack Bionics</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://packmotorsports.wixsite.com/packmotorsports"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-car"></i>
+                            </div>
+
+                            <div>
+                                <h3>Pack Motorsports: Formula SAE</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://www.ncstatebaja.com/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+
+                            <div>
+                                <h3>Pack Motorsports: Baja SAE</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://bae.ncsu.edu/pack-pullers/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-tractor"></i>
+                            </div>
+
+                            <div>
+                                <h3>Pack Pullers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://solarpacknc.com/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-solar-panel"></i>
+                            </div>
+
+                            <div>
+                                <h3>SolarPack</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="https://vgdc.org/"
+                            class="affiliation-card"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-gamepad"></i>
+                            </div>
+
+                            <div>
+                                <h3>Video Game Development Club</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     ACADEMIC & PROFESSIONAL
+                ================================== -->
+
+                <section class="affiliation-section">
+
+                    <div class="affiliation-section-header">
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        <h2>
+                            Academic &amp; Professional Engineering Organizations
+                        </h2>
+
+                    </div>
+
+
+                    <div class="affiliation-grid">
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/25"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-wind"></i>
+                            </div>
+
+                            <div>
+                                <h3>Air &amp; Waste Management Association</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/aci"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Concrete Institute</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://linktr.ee/ncsuaiaa"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-plane"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Institute of Aeronautics &amp; Astronautics</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://www.ncsuaiche.com/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Institute of Chemical Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/ans"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-atom"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Nuclear Society</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://asabestudentchapter.wordpress.ncsu.edu/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Society of Agricultural &amp; Biological Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/asce"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Society of Civil Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://asmencstate.wixsite.com/home"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Society of Mechanical Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/ashrae-at-ncsu"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-temperature-half"></i>
+                            </div>
+
+                            <div>
+                                <h3>ASHRAE</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://www.linkedin.com/in/ncsuagc/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-helmet-safety"></i>
+                            </div>
+
+                            <div>
+                                <h3>Associated General Contractors</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://ewh.ieee.org/sb/nc/ncsu/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div>
+                                <h3>Institute of Electrical &amp; Electronics Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/iise"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+
+                            <div>
+                                <h3>Institute of Industrial &amp; Systems Engineering</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     SERVICE & OUTREACH
+                ================================== -->
+
+                <section class="affiliation-section">
+
+                    <div class="affiliation-section-header">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <h2>
+                            Service &amp; Outreach
+                        </h2>
+
+                    </div>
+
+
+                    <div class="affiliation-grid">
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/catch"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+
+                            <div>
+                                <h3>Carolina Adapts Toys for Children</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="http://www.ewbncsu.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </div>
+
+                            <div>
+                                <h3>Engineers Without Borders</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://inspirengr.wixsite.com/inspireengr"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+                                <h3>InspirENGR</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/safewater"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+
+                            <div>
+                                <h3>NC Safewater</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://www.scibridge.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+
+                            <div>
+                                <h3>SciBridge</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://www.ncsu-hhp.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-hands-helping"></i>
+                            </div>
+
+                            <div>
+                                <h3>The Helping Hand Project</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     PEOPLE & PERSPECTIVES
+                ================================== -->
+
+                <section class="affiliation-section">
+
+                    <div class="affiliation-section-header">
+
+                        <i class="fa-solid fa-people-group"></i>
+
+                        <h2>
+                            People &amp; Perspectives in Engineering
+                        </h2>
+
+                    </div>
+
+
+                    <div class="affiliation-grid">
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/aises"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <div>
+                                <h3>American Indian Science &amp; Engineering Society</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://ncsucomm.wixsite.com/ncsunsbe"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+
+                            <div>
+                                <h3>National Society of Black Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://shpeatncstate.wixsite.com/wolfpacks"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-people-arrows"></i>
+                            </div>
+
+                            <div>
+                                <h3>Society of Hispanic Professional Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://linktr.ee/sasencsu"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+
+                            <div>
+                                <h3>Society of Asian Scientists &amp; Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://ncsu.swe.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+
+                            <div>
+                                <h3>Society of Women Engineers</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://www.wicsatncsu.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+
+                            <div>
+                                <h3>Women in Computer Science</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://ece.ncsu.edu/student-org/women-in-ece/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+
+                            <div>
+                                <h3>Women in Electrical &amp; Computer Engineering</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/wima"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+
+                            <div>
+                                <h3>Women in Mechanical &amp; Aerospace</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     HONOR SOCIETIES
+                ================================== -->
+
+                <section class="affiliation-section">
+
+                    <div class="affiliation-section-header">
+
+                        <i class="fa-solid fa-medal"></i>
+
+                        <h2>
+                            Honor Societies
+                        </h2>
+
+                    </div>
+
+
+                    <div class="affiliation-grid">
+
+
+                        <a href="https://www.aoegamma.org/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+
+                            <div>
+                                <h3>Alpha Omega Epsilon</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/alphapimu"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+
+                            <div>
+                                <h3>Alpha Pi Mu</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://hknbetaeta.wordpress.ncsu.edu/"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div>
+                                <h3>IEEE Eta Kappa Nu</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+
+                        <a href="https://getinvolved.ncsu.edu/organization/tbp"
+                           class="affiliation-card"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            <div class="affiliation-icon">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div>
+                                <h3>Tau Beta Pi</h3>
+                                <span class="visit-link">Visit organization →</span>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <strong>
+                    Engineers' Council
+                </strong>
+
+                <p>
+                    NC State University<br>
+                    College of Engineering
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="leadership.html">
+                    Leadership
+                </a>
+
+                <a href="events.html">
+                    Events
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
