@@ -2491,6 +2491,33 @@ a {
     .constitution-info {
         margin-top: 55px;
     }
+      .mobile-dropdown {
+       display: none;
+       width: 100%;
+       background: #ffffff;
+   }
+   
+   .mobile-dropdown.open {
+       display: block;
+   }
+   
+   .mobile-dropdown a {
+       display: block !important;
+       width: 100%;
+       padding: 13px 30px;
+       margin: 0;
+       border-bottom: 1px solid var(--border);
+       background: #ffffff;
+       color: var(--dark-gray);
+       font-size: 14px;
+       line-height: 1.4;
+       text-decoration: none;
+   }
+   
+   .mobile-dropdown a:hover {
+       background: var(--light-gray);
+       color: var(--wolfpack-red);
+   }
 
 }
 
@@ -2898,3 +2925,4 @@ a {
 .leader-profile-row .leader-role {
     pointer-events: none;
 }
+
